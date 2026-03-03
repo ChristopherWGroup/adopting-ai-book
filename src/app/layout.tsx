@@ -46,6 +46,9 @@ export const metadata: Metadata = {
     description:
       'A practical guide for small business owners and solopreneurs to bring AI into their workflows — without the overwhelm.',
   },
+  icons: {
+    icon: '/Logo - transparent background - favicon.png',
+  },
   robots: {
     index: true,
     follow: true,
