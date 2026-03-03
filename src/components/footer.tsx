@@ -46,7 +46,7 @@ export default function Footer() {
               The Author
             </h4>
             <p className="text-white/70 text-sm mb-3">
-              Want to work with Christopher directly?
+              Want to work with Christopher W. Group directly?
             </p>
             <a
               href="https://christopherwgroup.com"
@@ -60,7 +60,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 text-center text-white/40 text-sm">
-          © {year} Christopher W Group. All rights reserved.
+          © {year} Christopher W. Group. All rights reserved.
         </div>
       </div>
     </footer>

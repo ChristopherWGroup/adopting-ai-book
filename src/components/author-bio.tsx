@@ -36,16 +36,17 @@ export default function AuthorBio() {
               About the Author
             </p>
             <h2 className="font-heading font-bold text-2xl sm:text-3xl text-white mb-4">
-              Christopher W
+              Christopher W. Group
             </h2>
             <div className="space-y-3 text-white/70 leading-relaxed">
               <p>
-                Christopher is the founder of Christopher W Group, where he
-                helps small businesses and solopreneurs integrate AI and
-                automation into their day-to-day operations. He&apos;s worked
-                with business owners across industries — from consulting firms
-                and service businesses to retailers and solo operators —
-                helping them cut through the noise and find what actually works.
+                Christopher W. Group is the founder of the consultancy at
+                ChristopherWGroup.com, where he helps small businesses and
+                solopreneurs integrate AI and automation into their day-to-day
+                operations. He&apos;s worked with business owners across industries
+                — from consulting firms and service businesses to retailers and
+                solo operators — helping them cut through the noise and find
+                what actually works.
               </p>
               <p>
                 He&apos;s seen the same story repeat: a business owner hears

@@ -34,7 +34,7 @@ export function getAllPosts(): PostMeta[] {
       title: data.title ?? 'Untitled',
       date: data.date ?? new Date().toISOString(),
       excerpt: data.excerpt ?? '',
-      author: data.author ?? 'Christopher W',
+      author: data.author ?? 'Christopher W. Group',
       coverImage: data.coverImage,
       tags: data.tags ?? [],
     } satisfies PostMeta

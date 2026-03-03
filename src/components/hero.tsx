@@ -79,7 +79,7 @@ export default function Hero() {
                   A Guide for Business Owners Bringing AI Into Their Business
                 </p>
                 <div className="mt-auto w-full h-px bg-white/10" />
-                <p className="text-white/40 text-xs mt-4">Christopher W</p>
+                <p className="text-white/40 text-xs mt-4">Christopher W. Group</p>
               </div>
             </div>
           </motion.div>
