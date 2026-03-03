@@ -5,11 +5,12 @@ import { CheckCircle2 } from 'lucide-react'
 import { Section, Container } from './container'
 
 const highlights = [
-  'Written for business owners, not developers',
-  'Practical examples from real small business workflows',
-  'No jargon — plain language throughout',
-  'Actionable checklists and templates included',
-  'Covers the most impactful tools available today',
+  'Built around the "Smart Intern" model — a mental framework that makes AI immediately practical',
+  'Covers preparation and process before tools, because that\'s where most adoptions fail',
+  'Honest about risk: hallucinations, data privacy, overreliance, and what to do about each',
+  'Three adoption paths mapped out — DIY, internal champion, or outside expertise — with real trade-offs',
+  'Research-backed throughout, but written for business owners, not researchers',
+  'Written by someone who works with small businesses every day, not a tech journalist',
 ]
 
 export default function AboutBook() {
@@ -29,23 +30,25 @@ export default function AboutBook() {
             </h2>
             <div className="space-y-4 text-text-muted leading-relaxed">
               <p>
-                AI is no longer just for big tech companies. Today, a
-                solopreneur with the right tools can do the work of a small
-                team — and a small business can compete at a level that simply
-                wasn't possible five years ago.
+                AI adoption doesn&apos;t fail because the technology doesn&apos;t work.
+                It fails because business owners jump to tools before they&apos;ve
+                fixed the underlying processes those tools will run on. Or they
+                measure success by how the tool <em>feels</em> rather than what
+                it actually produces. Or they skip the governance steps that
+                would have caught the problem before it became a client complaint.
               </p>
               <p>
-                But most AI content is written by and for technologists. It
-                assumes you want to understand how the models work, not just
-                how to use them. <strong className="text-text-dark">Adopting AI</strong> is
-                different. It's written for the person running their own show —
-                the owner, the operator, the person doing everything.
+                <strong className="text-text-dark">Adopting AI</strong> is built
+                around a simple idea: you don&apos;t need to understand how AI works
+                to use it well. You need a clear framework for where it belongs
+                in your business, how to choose the right tools, and how to
+                measure whether they&apos;re actually working.
               </p>
               <p>
-                This book gives you a clear, repeatable framework for
-                identifying where AI belongs in your business, choosing the
-                right tools, and building workflows that save you real hours
-                every week.
+                Think of AI as the smartest intern you&apos;ve ever hired. Capable,
+                fast, available around the clock — and requiring oversight.
+                This book shows you how to direct that intern effectively,
+                without becoming a technology expert.
               </p>
             </div>
           </motion.div>

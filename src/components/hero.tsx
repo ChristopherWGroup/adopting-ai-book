@@ -35,8 +35,10 @@ export default function Hero() {
               A Guide for Business Owners Bringing AI Into Their Business
             </p>
             <p className="text-white/60 text-lg mb-8 leading-relaxed">
-              A practical, no-jargon playbook for small business owners and
-              solopreneurs who want to work smarter — not harder — using AI.
+              The shift is already happening. Your competitors are quietly
+              building advantages — one small workflow at a time. This book
+              gives you a clear, practical framework to bring AI into your
+              business before the window closes.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">

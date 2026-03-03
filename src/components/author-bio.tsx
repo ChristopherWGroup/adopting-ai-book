@@ -42,13 +42,19 @@ export default function AuthorBio() {
               <p>
                 Christopher is the founder of Christopher W Group, where he
                 helps small businesses and solopreneurs integrate AI and
-                automation into their day-to-day operations.
+                automation into their day-to-day operations. He&apos;s worked
+                with business owners across industries — from consulting firms
+                and service businesses to retailers and solo operators —
+                helping them cut through the noise and find what actually works.
               </p>
               <p>
-                He's spent years working with business owners who feel
-                overwhelmed by technology — and helping them find simple,
-                practical solutions that actually stick. <em>Adopting AI</em>{' '}
-                is the book he wishes had existed when he started this work.
+                He&apos;s seen the same story repeat: a business owner hears
+                about AI, tries a few tools, gets mixed results, and concludes
+                it&apos;s not ready for businesses like theirs. <em>Adopting AI</em>{' '}
+                is the book he puts in their hands instead. It&apos;s the guide he
+                wishes had existed when he started this work — practical,
+                honest, and written for people running real businesses, not
+                reading tech blogs.
               </p>
             </div>
 

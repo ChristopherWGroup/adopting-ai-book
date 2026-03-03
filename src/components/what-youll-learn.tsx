@@ -2,51 +2,51 @@
 
 import { motion } from 'framer-motion'
 import {
-  Map,
+  UserCheck,
+  HelpCircle,
   Wrench,
-  MessageSquare,
-  TrendingUp,
-  Shield,
-  Rocket,
+  BarChart2,
+  ShieldCheck,
+  Map,
 } from 'lucide-react'
 import { Section, Container } from './container'
 
 const lessons = [
   {
-    icon: Map,
-    title: 'Build Your AI Roadmap',
+    icon: UserCheck,
+    title: 'The Smart Intern Model',
     description:
-      'Cut through the noise and identify exactly which AI tools belong in your business — and in what order.',
+      'A clear mental model for what AI actually is — and isn\'t. Capable, fast, endlessly available, but requiring oversight. Once you have this framing, every tool decision becomes clearer.',
+  },
+  {
+    icon: HelpCircle,
+    title: 'Ask the Right Question',
+    description:
+      '"Should I use AI?" is the wrong question. The businesses getting ahead ask "Where can AI give me leverage?" That reframe points you toward specific, actionable answers instead of a philosophical debate.',
   },
   {
     icon: Wrench,
-    title: 'Practical Tool Walkthroughs',
+    title: 'Fix the Foundation First',
     description:
-      'Step-by-step guides to the AI tools that actually move the needle for solopreneurs and small teams.',
+      'Most AI failures aren\'t about AI. They\'re about process gaps the technology runs straight into. Learn how to prepare your business before touching any tools — and avoid the mistakes that sink most adoption efforts.',
   },
   {
-    icon: MessageSquare,
-    title: 'Write Better Prompts',
+    icon: Map,
+    title: 'Map Where Value Lives',
     description:
-      'Learn the prompt-writing fundamentals that get you useful, on-brand output instead of generic fluff.',
+      'Not every task is worth automating. Learn how to identify the work in your business where AI creates real, measurable time savings — and where it\'s more trouble than it\'s worth.',
   },
   {
-    icon: TrendingUp,
-    title: 'Automate Repetitive Work',
+    icon: BarChart2,
+    title: 'Measure Real Impact',
     description:
-      'Identify the tasks eating your week and build simple AI-powered workflows to handle them.',
+      'Feeling productive and being productive are different things. This book shows you how to set baselines before you start and measure impact honestly — so you know what\'s working and what\'s not.',
   },
   {
-    icon: Shield,
+    icon: ShieldCheck,
     title: 'Use AI Responsibly',
     description:
-      'Understand what to trust, what to verify, and how to maintain quality control when AI is part of your workflow.',
-  },
-  {
-    icon: Rocket,
-    title: 'Scale Without Hiring',
-    description:
-      'Discover how to grow your capacity and output using AI — without growing your payroll.',
+      'Data privacy, hallucinations, overreliance, unintended bias — the risks are real but manageable. Learn the practical guardrails every small business needs before something goes wrong.',
   },
 ]
 
@@ -62,11 +62,12 @@ export default function WhatYoullLearn() {
           className="text-center mb-14"
         >
           <h2 className="font-heading font-bold text-3xl sm:text-4xl text-text-dark mb-4">
-            What you'll learn
+            What you&apos;ll learn
           </h2>
           <p className="text-text-muted text-lg max-w-2xl mx-auto">
-            <em>Adopting AI</em> is a step-by-step guide written specifically
-            for business owners — no computer science degree required.
+            <em>Adopting AI</em> is built around ten chapters that take you from
+            &ldquo;I know I should be doing something&rdquo; to a concrete adoption strategy
+            that fits your actual business.
           </p>
         </motion.div>
 

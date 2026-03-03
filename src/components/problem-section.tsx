@@ -1,27 +1,27 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { HelpCircle, Zap, ShieldOff } from 'lucide-react'
+import { Radio, BarChart2, ShieldAlert } from 'lucide-react'
 import { Section, Container } from './container'
 
 const problems = [
   {
-    icon: HelpCircle,
-    title: "You don't know where to start",
+    icon: Radio,
+    title: 'The noise is deafening',
     description:
-      'The AI landscape moves fast. New tools appear daily, and it\'s hard to know which ones actually matter for your business — and which are just hype.',
+      "New tools appear daily. Every newsletter declares the next thing you can't afford to miss. Most of it is hype. Sorting signal from noise — and figuring out what actually belongs in your business — is a full-time job you didn't sign up for.",
   },
   {
-    icon: Zap,
-    title: "It feels overwhelming and technical",
+    icon: BarChart2,
+    title: "You've tried it, but nothing's really changed",
     description:
-      'Most AI content is written for developers and tech teams. As a business owner, you just need to know: will this save me time, and how do I actually use it?',
+      "You've experimented with ChatGPT, maybe a few other tools. Some things felt useful. But feeling more productive and actually being more productive are different things. Most businesses go from experimenting straight to assuming — and that's where real adoption stalls.",
   },
   {
-    icon: ShieldOff,
-    title: "You're worried about doing it wrong",
+    icon: ShieldAlert,
+    title: "You're not sure what responsible use looks like",
     description:
-      'What if AI produces bad work? What if your clients notice? What if you make costly mistakes? These fears keep many business owners on the sidelines.',
+      "AI makes things up with complete confidence. Customer data flows into tools you haven't fully vetted. You're not sure what guardrails you need — or whether you need them at all. The risks are real, but they're manageable when you know what to watch for.",
   },
 ]
 
@@ -40,8 +40,9 @@ export default function ProblemSection() {
             Sound familiar?
           </h2>
           <p className="text-text-muted text-lg max-w-2xl mx-auto">
-            Most small business owners want to use AI — they just don't know how to
-            start, or they've tried and felt lost. You're not alone.
+            Most small business owners aren&apos;t failing at AI because they&apos;re not
+            trying. They&apos;re failing because nobody gave them a clear framework
+            for doing it right.
           </p>
         </motion.div>
 
