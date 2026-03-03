@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ExternalLink } from 'lucide-react'
 import { Section, Container } from './container'
@@ -17,10 +18,14 @@ export default function AuthorBio() {
             transition={{ duration: 0.6 }}
             className="flex justify-center"
           >
-            <div className="w-48 h-48 rounded-full bg-white/10 border-2 border-white/20 flex items-center justify-center">
-              <span className="text-white/40 text-sm font-medium">
-                Author Photo
-              </span>
+            <div className="w-48 h-48 rounded-full overflow-hidden border-2 border-white/20 relative">
+              <Image
+                src="/author image.jpeg"
+                alt="Christopher W. Group"
+                fill
+                className="object-cover"
+                sizes="192px"
+              />
             </div>
           </motion.div>
 
