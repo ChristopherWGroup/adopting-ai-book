@@ -19,10 +19,10 @@ export default function ThankYouPage() {
           </div>
 
           <h1 className="font-heading font-bold text-3xl sm:text-4xl text-text-dark mb-4">
-            You're on the list!
+            You&apos;re on the list!
           </h1>
           <p className="text-text-muted text-lg mb-8 max-w-md mx-auto leading-relaxed">
-            Thanks for signing up. We'll send you an email as soon as{' '}
+            Thanks for signing up. We&apos;ll send you an email as soon as{' '}
             <em>Adopting AI</em> is ready to launch — along with your free
             sample chapter.
           </p>
