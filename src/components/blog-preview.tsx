@@ -23,7 +23,7 @@ export default function BlogPreview() {
         <div className="flex items-end justify-between mb-10">
           <div>
             <h2 className="font-heading font-bold text-3xl sm:text-4xl text-text-dark mb-2">
-              Resources &amp; insights
+              Resources &amp; Insights
             </h2>
             <p className="text-text-muted">
               Practical AI guidance for business owners — free, no signup required.
