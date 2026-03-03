@@ -103,7 +103,7 @@ export default function BlogPostPage({ params }: Props) {
               Get notified when <em>Adopting AI</em> launches and receive a free sample chapter.
             </p>
             <Link
-              href="/#signup"
+              href="/book#signup"
               className="inline-flex items-center gap-2 bg-brand-accent hover:bg-brand-accent-hover text-white font-heading font-semibold px-6 py-3 rounded-2xl transition-colors text-sm"
             >
               Notify Me at Launch
