@@ -21,10 +21,10 @@ export default function Navigation() {
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
           <Link
-            href="/#about"
+            href="/book"
             className="text-text-muted hover:text-brand-primary font-medium transition-colors"
           >
-            About
+            Book
           </Link>
           <Link
             href="/blog"
@@ -33,7 +33,7 @@ export default function Navigation() {
             Resources
           </Link>
           <Link
-            href="/#author"
+            href="/book#author"
             className="text-text-muted hover:text-brand-primary font-medium transition-colors"
           >
             The Author
@@ -42,7 +42,7 @@ export default function Navigation() {
 
         {/* Desktop CTA */}
         <div className="hidden md:block">
-          <Link href="/#signup">
+          <Link href="/book#signup">
             <Button size="sm">Get the Book</Button>
           </Link>
         </div>
@@ -61,11 +61,11 @@ export default function Navigation() {
       {mobileOpen && (
         <div className="md:hidden border-t border-gray-100 bg-white px-4 py-4 space-y-3">
           <Link
-            href="/#about"
+            href="/book"
             className="block py-2 text-text-muted hover:text-brand-primary font-medium transition-colors"
             onClick={() => setMobileOpen(false)}
           >
-            About
+            Book
           </Link>
           <Link
             href="/blog"
@@ -75,13 +75,13 @@ export default function Navigation() {
             Resources
           </Link>
           <Link
-            href="/#author"
+            href="/book#author"
             className="block py-2 text-text-muted hover:text-brand-primary font-medium transition-colors"
             onClick={() => setMobileOpen(false)}
           >
             The Author
           </Link>
-          <Link href="/#signup" onClick={() => setMobileOpen(false)}>
+          <Link href="/book#signup" onClick={() => setMobileOpen(false)}>
             <Button size="sm" className="w-full mt-2">
               Get the Book
             </Button>
