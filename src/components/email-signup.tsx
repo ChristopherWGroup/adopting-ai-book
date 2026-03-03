@@ -71,10 +71,10 @@ export default function EmailSignup() {
             >
               <CheckCircle className="w-10 h-10 text-brand-accent" />
               <p className="font-heading font-semibold text-white text-lg">
-                You&apos;re on the list!
+                {"You're on the list!"}
               </p>
               <p className="text-white/70 text-sm">
-                We&apos;ll be in touch when the book is ready.
+                {"We'll be in touch when the book is ready."}
               </p>
             </motion.div>
           ) : (
