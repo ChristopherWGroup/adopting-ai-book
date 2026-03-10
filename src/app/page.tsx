@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { Section, Container } from '@/components/container'
 import { Button } from '@/components/button'
+import { ButtonColorful } from '@/components/ui/button-colorful'
 import BlogPreview from '@/components/blog-preview'
 
 export const metadata: Metadata = {
@@ -34,9 +35,7 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/blog">
-                <Button size="lg" variant="primary">
-                  Browse Resources
-                </Button>
+                <ButtonColorful label="Browse Resources" className="h-14 px-8 text-lg" />
               </Link>
               <Link href="/book">
                 <Button size="lg" variant="secondary">

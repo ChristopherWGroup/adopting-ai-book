@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Button } from './button'
+import { ButtonColorful } from '@/components/ui/button-colorful'
 
 const ease = [0.25, 0.46, 0.45, 0.94]
 
@@ -34,9 +35,7 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#signup">
-              <Button size="lg" variant="primary">
-                Get Notified at Launch
-              </Button>
+              <ButtonColorful label="Get Notified at Launch" className="h-14 px-8 text-lg" />
             </Link>
             <Link href="#about">
               <Button size="lg" variant="secondary">

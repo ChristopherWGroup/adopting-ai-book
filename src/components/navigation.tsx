@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { Button } from './button'
+import { ButtonColorful } from '@/components/ui/button-colorful'
 
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -46,7 +47,7 @@ export default function Navigation() {
         {/* Desktop CTA */}
         <div className="hidden md:block">
           <Link href="/book#signup">
-            <Button size="sm">Get the Book</Button>
+            <ButtonColorful label="Get the Book" className="h-8 px-4 text-sm" />
           </Link>
         </div>
 
@@ -85,9 +86,7 @@ export default function Navigation() {
             The Author
           </Link>
           <Link href="/book#signup" onClick={() => setMobileOpen(false)}>
-            <Button size="sm" className="w-full mt-2">
-              Get the Book
-            </Button>
+            <ButtonColorful label="Get the Book" className="w-full mt-2 h-9 text-sm" />
           </Link>
         </div>
       )}
