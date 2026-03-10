@@ -5,20 +5,22 @@ import { motion } from 'framer-motion'
 import { ExternalLink } from 'lucide-react'
 import { Section, Container } from './container'
 
+const ease = [0.25, 0.46, 0.45, 0.94]
+
 export default function AuthorBio() {
   return (
-    <Section className="bg-brand-primary-dark" id="author">
+    <Section className="bg-surface-light" id="author">
       <Container size="md">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
-          {/* Photo placeholder */}
+          {/* Photo */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.7, ease }}
             className="flex justify-center"
           >
-            <div className="w-48 h-48 rounded-full overflow-hidden border-2 border-white/20 relative">
+            <div className="w-48 h-48 rounded-full overflow-hidden relative">
               <Image
                 src="/author image.jpeg"
                 alt="Christopher W. Group"
@@ -31,19 +33,19 @@ export default function AuthorBio() {
 
           {/* Bio */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            transition={{ duration: 0.7, delay: 0.1, ease }}
             className="md:col-span-2"
           >
-            <p className="text-brand-accent font-semibold text-sm uppercase tracking-wider mb-3">
+            <p className="text-text-muted text-xs uppercase tracking-widest mb-3">
               About the Author
             </p>
-            <h2 className="font-heading font-bold text-2xl sm:text-3xl text-white mb-4">
+            <h2 className="font-heading font-bold text-2xl sm:text-3xl text-text-dark tracking-tight mb-4">
               Christopher W. Group
             </h2>
-            <div className="space-y-3 text-white/70 leading-relaxed">
+            <div className="space-y-3 text-text-muted font-light leading-relaxed">
               <p>
                 Christopher W. Group is the founder of the consultancy at
                 ChristopherWGroup.com, where he helps small businesses and
@@ -69,7 +71,7 @@ export default function AuthorBio() {
                 href="https://christopherwgroup.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-brand-accent hover:text-brand-accent-hover font-medium transition-colors"
+                className="inline-flex items-center gap-2 text-brand-primary hover:text-brand-primary-dark font-medium transition-colors text-sm"
               >
                 Visit ChristopherWGroup.com
                 <ExternalLink className="w-4 h-4" />

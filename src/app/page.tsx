@@ -15,82 +15,70 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <div className="relative bg-gradient-to-br from-brand-primary-dark via-brand-primary to-indigo-500 py-24 sm:py-32 overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage:
-              'radial-gradient(circle at 25% 25%, white 1px, transparent 1px), radial-gradient(circle at 75% 75%, white 1px, transparent 1px)',
-            backgroundSize: '48px 48px',
-          }}
-        />
-        <Container className="relative z-10">
-          <div className="max-w-2xl">
-            <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-6">
-              AI for the businesses actually running things
+      <div className="bg-white pt-24 pb-20 sm:pt-36 sm:pb-28">
+        <Container>
+          <div className="max-w-3xl">
+            <h1 className="font-heading font-bold text-[52px] sm:text-[64px] lg:text-[80px] text-text-dark leading-none tracking-tighter mb-6">
+              AI for the businesses actually running things.
             </h1>
-            <p className="text-white/70 text-xl leading-relaxed mb-10">
+            <p className="text-text-muted text-xl font-light leading-relaxed mb-10 max-w-2xl">
               Practical, no-jargon guidance on bringing AI into your business —
               from someone who works with small business owners every day.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/blog">
-                <Button size="lg" variant="accent">
+                <Button size="lg" variant="primary">
                   Browse Resources
                 </Button>
               </Link>
               <Link href="/book">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="border-white/40 text-white hover:bg-white hover:text-brand-primary"
-                >
+                <Button size="lg" variant="secondary">
                   About the Book
                 </Button>
               </Link>
             </div>
           </div>
         </Container>
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-surface-light to-transparent" />
       </div>
 
       {/* Featured: The Book */}
       <Section className="bg-surface-light">
         <Container>
-          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <div className="bg-surface-light rounded-3xl overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2">
               {/* Book info */}
               <div className="p-8 sm:p-12">
-                <span className="inline-block bg-brand-primary/10 text-brand-primary font-semibold text-xs px-3 py-1 rounded-full mb-6 uppercase tracking-wider">
+                <span className="inline-block bg-[#1d1d1f] text-white text-xs px-3 py-1 rounded-full mb-6">
                   Coming Soon
                 </span>
-                <h2 className="font-heading font-bold text-3xl sm:text-4xl text-text-dark leading-tight mb-4">
+                <h2 className="font-heading font-bold text-[32px] sm:text-[40px] text-text-dark leading-tight tracking-tighter mb-4">
                   Adopting AI
                 </h2>
-                <p className="text-text-muted text-lg leading-relaxed mb-6">
+                <p className="text-text-muted text-lg font-light leading-relaxed mb-6">
                   A practical guide for business owners who want a clear
                   framework for bringing AI into their workflows — not just
                   another list of tools to try.
                 </p>
-                <Link href="/book">
-                  <Button variant="primary">
-                    Learn more about the book <ArrowRight className="w-4 h-4 ml-1" />
-                  </Button>
+                <Link
+                  href="/book"
+                  className="inline-flex items-center gap-1.5 text-brand-primary font-medium text-sm hover:underline transition-colors"
+                >
+                  Learn more about the book <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
 
               {/* Book cover mockup */}
-              <div className="bg-gradient-to-br from-brand-primary to-indigo-600 p-12 flex items-center justify-center">
-                <div className="relative w-48 h-64 bg-gradient-to-br from-white/20 to-white/5 rounded-xl border border-white/20 backdrop-blur-sm flex flex-col items-center justify-center p-6 shadow-2xl">
-                  <BookOpen className="w-10 h-10 text-brand-accent mb-4" />
+              <div className="bg-[#1d1d1f] p-12 flex items-center justify-center">
+                <div className="relative w-48 h-64 bg-white/5 rounded-2xl border border-white/10 flex flex-col items-center justify-center p-6 shadow-2xl">
+                  <BookOpen className="w-10 h-10 text-white/30 mb-4" />
                   <p className="font-heading font-bold text-white text-center text-base leading-snug mb-3">
                     Adopting AI
                   </p>
-                  <p className="text-white/50 text-xs text-center leading-relaxed">
+                  <p className="text-white/40 text-xs text-center leading-relaxed">
                     A Guide for Business Owners
                   </p>
                   <div className="mt-auto w-full h-px bg-white/10" />
-                  <p className="text-white/40 text-xs mt-3">Christopher W. Group</p>
+                  <p className="text-white/30 text-xs mt-3">Christopher W. Group</p>
                 </div>
               </div>
             </div>

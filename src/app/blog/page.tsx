@@ -25,13 +25,13 @@ export default function BlogPage() {
   return (
     <>
       {/* Header */}
-      <div className="bg-brand-primary-dark py-16 sm:py-20">
+      <div className="bg-white pt-24 pb-12 sm:pt-32 sm:pb-16 border-b border-[#1d1d1f]/10">
         <Container>
           <div className="max-w-2xl">
-            <h1 className="font-heading font-bold text-4xl sm:text-5xl text-white mb-4">
+            <h1 className="font-heading font-bold text-[48px] sm:text-[60px] text-text-dark tracking-tighter leading-tight mb-4">
               Resources &amp; Insights
             </h1>
-            <p className="text-white/70 text-lg leading-relaxed">
+            <p className="text-text-muted text-lg font-light leading-relaxed">
               Practical guidance on adopting AI in your business — no jargon,
               no hype. Just useful ideas you can act on today.
             </p>
@@ -40,7 +40,7 @@ export default function BlogPage() {
       </div>
 
       {/* Posts grid */}
-      <Section className="bg-surface-light">
+      <Section className="bg-white">
         <Container>
           {posts.length === 0 ? (
             <div className="text-center py-16 text-text-muted">
@@ -50,15 +50,15 @@ export default function BlogPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {posts.map((post) => (
                 <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
-                  <Card className="h-full hover:shadow-md transition-shadow flex flex-col">
+                  <Card className="h-full flex flex-col">
                     <div className="flex items-center gap-1.5 text-text-muted text-xs mb-3">
                       <Calendar className="w-3.5 h-3.5" />
                       {formatDate(post.date)}
                     </div>
-                    <h2 className="font-heading font-semibold text-text-dark text-lg leading-snug mb-3 group-hover:text-brand-primary transition-colors flex-1">
+                    <h2 className="font-heading font-semibold text-text-dark text-lg leading-snug mb-3 group-hover:text-text-dark/70 transition-colors flex-1 tracking-tight">
                       {post.title}
                     </h2>
-                    <p className="text-text-muted text-sm leading-relaxed mb-4 line-clamp-3">
+                    <p className="text-text-muted text-sm font-light leading-relaxed mb-4 line-clamp-3">
                       {post.excerpt}
                     </p>
                     {post.tags && post.tags.length > 0 && (
@@ -66,7 +66,7 @@ export default function BlogPage() {
                         {post.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="text-xs px-2 py-0.5 rounded-full bg-brand-primary/10 text-brand-primary font-medium"
+                            className="text-xs px-2.5 py-0.5 rounded-full bg-surface-light text-text-muted"
                           >
                             {tag}
                           </span>

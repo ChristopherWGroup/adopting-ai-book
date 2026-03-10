@@ -30,14 +30,14 @@ export default function ThankYouPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/blog"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-primary text-white font-heading font-semibold rounded-2xl hover:bg-brand-primary-dark transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-primary text-white font-sans font-medium rounded-full hover:bg-brand-primary-dark transition-colors"
             >
               <BookOpen className="w-4 h-4" />
               Read the Blog
             </Link>
             <Link
               href="/"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-brand-primary text-brand-primary font-heading font-semibold rounded-2xl hover:bg-brand-primary hover:text-white transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 text-brand-primary font-sans font-medium rounded-full hover:underline transition-colors"
             >
               Back to Home <ArrowRight className="w-4 h-4" />
             </Link>

@@ -9,11 +9,11 @@ export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
-      <nav className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <header className="sticky top-0 z-50 glass-nav border-b border-black/5">
+      <nav className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <span className="font-heading font-bold text-xl text-brand-primary">
+          <span className="font-heading font-semibold text-base text-text-dark">
             Adopting AI
           </span>
         </Link>
@@ -22,19 +22,19 @@ export default function Navigation() {
         <div className="hidden md:flex items-center gap-8">
           <Link
             href="/book"
-            className="text-text-muted hover:text-brand-primary font-medium transition-colors"
+            className="text-text-dark/60 hover:text-text-dark text-sm font-normal transition-colors"
           >
             Book
           </Link>
           <Link
             href="/blog"
-            className="text-text-muted hover:text-brand-primary font-medium transition-colors"
+            className="text-text-dark/60 hover:text-text-dark text-sm font-normal transition-colors"
           >
             Resources
           </Link>
           <Link
             href="/book#author"
-            className="text-text-muted hover:text-brand-primary font-medium transition-colors"
+            className="text-text-dark/60 hover:text-text-dark text-sm font-normal transition-colors"
           >
             The Author
           </Link>
@@ -49,34 +49,34 @@ export default function Navigation() {
 
         {/* Mobile menu toggle */}
         <button
-          className="md:hidden p-2 text-text-muted hover:text-brand-primary transition-colors"
+          className="md:hidden p-2 text-text-dark/60 hover:text-text-dark transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </nav>
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-gray-100 bg-white px-4 py-4 space-y-3">
+        <div className="md:hidden border-t border-black/5 glass-nav px-4 py-4 space-y-3">
           <Link
             href="/book"
-            className="block py-2 text-text-muted hover:text-brand-primary font-medium transition-colors"
+            className="block py-2 text-text-dark/60 hover:text-text-dark text-sm font-normal transition-colors"
             onClick={() => setMobileOpen(false)}
           >
             Book
           </Link>
           <Link
             href="/blog"
-            className="block py-2 text-text-muted hover:text-brand-primary font-medium transition-colors"
+            className="block py-2 text-text-dark/60 hover:text-text-dark text-sm font-normal transition-colors"
             onClick={() => setMobileOpen(false)}
           >
             Resources
           </Link>
           <Link
             href="/book#author"
-            className="block py-2 text-text-muted hover:text-brand-primary font-medium transition-colors"
+            className="block py-2 text-text-dark/60 hover:text-text-dark text-sm font-normal transition-colors"
             onClick={() => setMobileOpen(false)}
           >
             The Author

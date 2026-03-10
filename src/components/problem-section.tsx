@@ -4,6 +4,8 @@ import { motion } from 'framer-motion'
 import { Radio, BarChart2, ShieldAlert } from 'lucide-react'
 import { Section, Container } from './container'
 
+const ease = [0.25, 0.46, 0.45, 0.94]
+
 const problems = [
   {
     icon: Radio,
@@ -27,42 +29,42 @@ const problems = [
 
 export default function ProblemSection() {
   return (
-    <Section className="bg-white" id="about">
+    <Section className="bg-surface-light" id="about">
       <Container>
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-14"
+          transition={{ duration: 0.7, ease }}
+          className="text-center mb-16"
         >
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-text-dark mb-4">
+          <h2 className="font-heading font-bold text-[40px] sm:text-[52px] text-text-dark tracking-tighter leading-tight mb-4">
             Sound familiar?
           </h2>
-          <p className="text-text-muted text-lg max-w-2xl mx-auto">
+          <p className="text-text-muted text-lg font-light max-w-2xl mx-auto">
             Most small business owners aren&apos;t failing at AI because they&apos;re not
             trying. They&apos;re failing because nobody gave them a clear framework
             for doing it right.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {problems.map((problem, i) => (
             <motion.div
               key={problem.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="flex flex-col items-start p-6 rounded-2xl bg-surface-light border border-gray-100"
+              transition={{ duration: 0.6, delay: i * 0.08, ease }}
+              className="flex flex-col items-start p-8 rounded-3xl bg-white"
             >
-              <div className="p-3 bg-brand-primary/10 rounded-xl mb-4">
-                <problem.icon className="w-6 h-6 text-brand-primary" />
+              <div className="p-3 bg-surface-light rounded-2xl mb-5">
+                <problem.icon className="w-6 h-6 text-text-dark" />
               </div>
-              <h3 className="font-heading font-semibold text-lg text-text-dark mb-2">
+              <h3 className="font-heading font-semibold text-lg text-text-dark mb-3 tracking-tight">
                 {problem.title}
               </h3>
-              <p className="text-text-muted text-sm leading-relaxed">
+              <p className="text-text-muted text-sm font-light leading-relaxed">
                 {problem.description}
               </p>
             </motion.div>

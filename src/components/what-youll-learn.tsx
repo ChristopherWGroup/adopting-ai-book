@@ -50,21 +50,23 @@ const lessons = [
   },
 ]
 
+const ease = [0.25, 0.46, 0.45, 0.94]
+
 export default function WhatYoullLearn() {
   return (
-    <Section className="bg-surface-light">
+    <Section className="bg-white">
       <Container>
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-14"
+          transition={{ duration: 0.7, ease }}
+          className="text-center mb-16"
         >
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-text-dark mb-4">
+          <h2 className="font-heading font-bold text-[40px] sm:text-[52px] text-text-dark tracking-tighter leading-tight mb-4">
             What you&apos;ll learn
           </h2>
-          <p className="text-text-muted text-lg max-w-2xl mx-auto">
+          <p className="text-text-muted text-lg font-light max-w-2xl mx-auto">
             <em>Adopting AI</em> is built around ten chapters that take you from
             &ldquo;I know I should be doing something&rdquo; to a concrete adoption strategy
             that fits your actual business.
@@ -75,23 +77,21 @@ export default function WhatYoullLearn() {
           {lessons.map((lesson, i) => (
             <motion.div
               key={lesson.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group flex gap-4 p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+              transition={{ duration: 0.6, delay: i * 0.06, ease }}
+              className="flex flex-col p-8 rounded-3xl bg-surface-light"
             >
-              <div className="shrink-0 p-2.5 bg-brand-primary/10 rounded-xl h-fit group-hover:bg-brand-primary/20 transition-colors">
-                <lesson.icon className="w-5 h-5 text-brand-primary" />
+              <div className="w-10 h-10 flex items-center justify-center rounded-2xl bg-[#1d1d1f] mb-5 shrink-0">
+                <lesson.icon className="w-5 h-5 text-white" />
               </div>
-              <div>
-                <h3 className="font-heading font-semibold text-text-dark mb-1">
-                  {lesson.title}
-                </h3>
-                <p className="text-text-muted text-sm leading-relaxed">
-                  {lesson.description}
-                </p>
-              </div>
+              <h3 className="font-heading font-semibold text-text-dark mb-2 tracking-tight">
+                {lesson.title}
+              </h3>
+              <p className="text-text-muted text-sm font-light leading-relaxed">
+                {lesson.description}
+              </p>
             </motion.div>
           ))}
         </div>

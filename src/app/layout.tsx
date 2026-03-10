@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { Inter, Lexend } from 'next/font/google'
+import { Inter } from 'next/font/google'
+import { GeistSans } from 'geist/font/sans'
 import Script from 'next/script'
 import './globals.css'
 import Navigation from '@/components/navigation'
@@ -9,13 +10,6 @@ const inter = Inter({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-inter',
-  display: 'swap',
-})
-
-const lexend = Lexend({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800'],
-  variable: '--font-lexend',
   display: 'swap',
 })
 
@@ -62,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${lexend.variable}`}>
+    <html lang="en" className={`${inter.variable} ${GeistSans.variable}`}>
       <body className="flex flex-col min-h-screen">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-8C7TRLG76G"

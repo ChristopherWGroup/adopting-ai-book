@@ -13,22 +13,24 @@ const highlights = [
   'Written by someone who works with small businesses every day, not a tech journalist',
 ]
 
+const ease = [0.25, 0.46, 0.45, 0.94]
+
 export default function AboutBook() {
   return (
-    <Section className="bg-white">
+    <Section className="bg-black">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text content */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.7, ease }}
           >
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-text-dark mb-6">
+            <h2 className="font-heading font-bold text-[40px] sm:text-[52px] text-white tracking-tighter leading-tight mb-6">
               About the book
             </h2>
-            <div className="space-y-4 text-text-muted leading-relaxed">
+            <div className="space-y-4 text-white/60 font-light leading-relaxed">
               <p>
                 AI adoption doesn&apos;t fail because the technology doesn&apos;t work.
                 It fails because business owners jump to tools before they&apos;ve
@@ -38,7 +40,7 @@ export default function AboutBook() {
                 would have caught the problem before it became a client complaint.
               </p>
               <p>
-                <strong className="text-text-dark">Adopting AI</strong> is built
+                <strong className="text-white font-semibold">Adopting AI</strong> is built
                 around a simple idea: you don&apos;t need to understand how AI works
                 to use it well. You need a clear framework for where it belongs
                 in your business, how to choose the right tools, and how to
@@ -55,20 +57,20 @@ export default function AboutBook() {
 
           {/* Highlights list */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="bg-surface-light rounded-2xl p-8 border border-gray-100"
+            transition={{ duration: 0.7, delay: 0.1, ease }}
+            className="bg-white/5 rounded-3xl p-8 border border-white/10"
           >
-            <h3 className="font-heading font-semibold text-lg text-text-dark mb-6">
+            <h3 className="font-heading font-semibold text-lg text-white mb-6 tracking-tight">
               What makes this book different
             </h3>
             <ul className="space-y-4">
               {highlights.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-brand-accent shrink-0 mt-0.5" />
-                  <span className="text-text-muted text-sm leading-relaxed">
+                  <CheckCircle2 className="w-5 h-5 text-white/50 shrink-0 mt-0.5" />
+                  <span className="text-white/60 text-sm font-light leading-relaxed">
                     {item}
                   </span>
                 </li>

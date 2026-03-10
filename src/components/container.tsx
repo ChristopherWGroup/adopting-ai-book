@@ -30,9 +30,9 @@ export function Container({ children, size = 'lg', className }: ContainerProps) 
 
 export function Section({ children, size = 'md', className, id }: SectionProps) {
   const sizes = {
-    sm: 'py-12',
-    md: 'py-20',
-    lg: 'py-28',
+    sm: 'py-20',
+    md: 'py-28',
+    lg: 'py-36',
   }
 
   return (

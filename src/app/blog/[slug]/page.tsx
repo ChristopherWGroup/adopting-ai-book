@@ -48,21 +48,21 @@ export default function BlogPostPage({ params }: Props) {
   return (
     <>
       {/* Header */}
-      <div className="bg-brand-primary-dark py-14 sm:py-18">
+      <div className="bg-white pt-24 pb-10 sm:pt-32 sm:pb-14 border-b border-[#1d1d1f]/10">
         <Container size="md">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-1.5 text-white/50 hover:text-white text-sm mb-6 transition-colors"
+            className="inline-flex items-center gap-1.5 text-text-muted hover:text-text-dark text-sm mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" /> Back to Resources
           </Link>
 
           {post.tags && post.tags.length > 0 && (
-            <div className="flex flex-wrap gap-2 mb-4">
+            <div className="flex flex-wrap gap-2 mb-5">
               {post.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs px-3 py-1 rounded-full bg-brand-accent/20 text-brand-accent font-medium border border-brand-accent/30"
+                  className="text-xs px-3 py-1 rounded-full bg-surface-light text-text-muted"
                 >
                   {tag}
                 </span>
@@ -70,11 +70,11 @@ export default function BlogPostPage({ params }: Props) {
             </div>
           )}
 
-          <h1 className="font-heading font-bold text-3xl sm:text-4xl text-white mb-6 leading-tight">
+          <h1 className="font-heading font-bold text-[32px] sm:text-[44px] text-text-dark mb-6 leading-tight tracking-tighter">
             {post.title}
           </h1>
 
-          <div className="flex items-center gap-5 text-white/50 text-sm">
+          <div className="flex items-center gap-5 text-text-muted text-sm">
             <span className="inline-flex items-center gap-1.5">
               <User className="w-3.5 h-3.5" />
               {post.author}
@@ -95,16 +95,16 @@ export default function BlogPostPage({ params }: Props) {
           </article>
 
           {/* CTA at bottom */}
-          <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-brand-primary text-white text-center">
-            <h3 className="font-heading font-bold text-xl mb-2">
+          <div className="mt-16 p-8 rounded-3xl bg-[#1d1d1f] text-white text-center">
+            <h3 className="font-heading font-bold text-2xl tracking-tight mb-2">
               Enjoyed this post?
             </h3>
-            <p className="text-white/70 text-sm mb-4">
+            <p className="text-white/50 text-base font-light mb-6">
               Get notified when <em>Adopting AI</em> launches and receive a free sample chapter.
             </p>
             <Link
               href="/book#signup"
-              className="inline-flex items-center gap-2 bg-brand-accent hover:bg-brand-accent-hover text-white font-heading font-semibold px-6 py-3 rounded-2xl transition-colors text-sm"
+              className="inline-flex items-center gap-2 bg-brand-primary hover:bg-brand-primary-dark text-white font-sans font-medium px-6 py-3 rounded-full transition-colors text-sm"
             >
               Notify Me at Launch
             </Link>

@@ -10,26 +10,41 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          primary: '#3730A3',
-          'primary-dark': '#1E1B4B',
-          accent: '#F59E0B',
-          'accent-hover': '#D97706',
+          primary: '#0071e3',
+          'primary-dark': '#0077ED',
+          accent: '#0071e3',
+          'accent-hover': '#0077ED',
         },
         text: {
-          dark: '#111827',
-          muted: '#6B7280',
+          dark: '#1d1d1f',
+          muted: '#6e6e73',
         },
         surface: {
-          light: '#F8F9FE',
-          white: '#FFFFFF',
+          light: '#f5f5f7',
+          white: '#ffffff',
+          dark: '#000000',
+          'near-black': '#1d1d1f',
         },
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        heading: ['var(--font-lexend)', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-geist-sans)', 'var(--font-inter)', 'system-ui', 'sans-serif'],
+      },
+      fontSize: {
+        'display-xl': ['96px', { lineHeight: '1.05', letterSpacing: '-0.03em' }],
+        'display-lg': ['80px', { lineHeight: '1.06', letterSpacing: '-0.025em' }],
+        'display-md': ['64px', { lineHeight: '1.08', letterSpacing: '-0.02em' }],
+        'display-sm': ['48px', { lineHeight: '1.1', letterSpacing: '-0.018em' }],
+        headline: ['32px', { lineHeight: '1.15', letterSpacing: '-0.015em' }],
+      },
+      letterSpacing: {
+        tighter: '-0.03em',
+        tight: '-0.015em',
+        apple: '-0.025em',
       },
       borderRadius: {
         '2xl': '1rem',
+        '3xl': '1.5rem',
       },
     },
   },
