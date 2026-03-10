@@ -97,16 +97,19 @@ export default function EmailSignup() {
               <button
                 type="submit"
                 disabled={status === 'loading' || !email}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-brand-primary hover:bg-brand-primary-dark text-white font-sans font-medium rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+                className="relative inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-zinc-900 text-white font-sans font-medium rounded-full overflow-hidden transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap group"
               >
-                {status === 'loading' ? (
-                  <>
-                    <Loader2 className="w-4 h-4 animate-spin" />
-                    Signing up…
-                  </>
-                ) : (
-                  'Notify Me'
-                )}
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-40 group-hover:opacity-80 blur transition-opacity duration-500" />
+                <div className="relative flex items-center justify-center gap-2">
+                  {status === 'loading' ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      Signing up…
+                    </>
+                  ) : (
+                    'Notify Me'
+                  )}
+                </div>
               </button>
             </form>
           )}
