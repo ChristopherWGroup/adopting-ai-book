@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import { Section, Container } from '@/components/container'
 import { ButtonColorful } from '@/components/ui/button-colorful'
+import { AuroraBackground } from '@/components/ui/aurora-background'
 import BlogPreview from '@/components/blog-preview'
 
 export const metadata: Metadata = {
@@ -15,10 +17,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <div className="relative bg-white pt-24 pb-20 sm:pt-36 sm:pb-28 overflow-hidden">
-        {/* Subtle radial gradient decoration */}
-        <div className="pointer-events-none absolute -top-32 -right-48 w-[700px] h-[700px] rounded-full bg-[radial-gradient(circle,_#dbeafe_0%,_transparent_65%)] opacity-50" />
-        <div className="pointer-events-none absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,_#f0f4ff_0%,_transparent_70%)] opacity-40" />
+      <AuroraBackground className="h-auto items-start justify-start pt-24 pb-20 sm:pt-36 sm:pb-28 bg-white">
         <Container>
           <div className="max-w-3xl">
             <h1 className="font-heading font-bold text-[52px] sm:text-[68px] lg:text-[84px] text-text-dark leading-none tracking-tighter mb-6">
@@ -41,7 +40,7 @@ export default function HomePage() {
             </div>
           </div>
         </Container>
-      </div>
+      </AuroraBackground>
 
       {/* Featured: The Book */}
       <Section className="bg-surface-light">
@@ -70,31 +69,18 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              {/* Book cover mockup */}
+              {/* Book cover */}
               <div className="relative p-12 flex items-center justify-center overflow-hidden">
-                {/* Subtle glow behind book */}
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_#1e3a5f_0%,_transparent_70%)] opacity-60" />
-                {/* Book */}
                 <div className="relative">
-                  {/* Book shadow */}
                   <div className="absolute -bottom-4 left-4 right-4 h-8 bg-black/40 blur-xl rounded-full" />
-                  {/* Book spine */}
-                  <div className="absolute left-0 top-0 bottom-0 w-5 bg-gradient-to-r from-[#111] to-[#2a2a2a] rounded-l-sm" />
-                  {/* Book cover */}
-                  <div className="relative w-48 h-64 sm:w-56 sm:h-72 bg-gradient-to-br from-[#1a2744] via-[#1e3060] to-[#0f1a35] rounded-r-md rounded-l-none border border-white/[0.08] flex flex-col p-7 shadow-[0_25px_50px_-10px_rgba(0,0,0,0.8)]">
-                    {/* Decorative line */}
-                    <div className="w-8 h-px bg-brand-primary/70 mb-6" />
-                    <p className="font-heading font-bold text-white text-xl leading-tight mb-2 tracking-tight">
-                      Adopting<br />AI
-                    </p>
-                    <p className="text-white/40 text-[11px] leading-relaxed">
-                      A Guide for Business Owners
-                    </p>
-                    <div className="mt-auto">
-                      <div className="w-full h-px bg-white/10 mb-3" />
-                      <p className="text-white/30 text-[10px]">Christopher W. Group</p>
-                    </div>
-                  </div>
+                  <Image
+                    src="/book-cover.jpg"
+                    alt="Adopting AI book cover"
+                    width={224}
+                    height={288}
+                    className="relative rounded-md shadow-[0_25px_50px_-10px_rgba(0,0,0,0.8)]"
+                  />
                 </div>
               </div>
             </div>
