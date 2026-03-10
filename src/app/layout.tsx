@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Lexend } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import Navigation from '@/components/navigation'
 import Footer from '@/components/footer'
@@ -63,6 +64,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${lexend.variable}`}>
       <body className="flex flex-col min-h-screen">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-8C7TRLG76G"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-8C7TRLG76G');
+          `}
+        </Script>
         <Navigation />
         <main className="flex-1">{children}</main>
         <Footer />
