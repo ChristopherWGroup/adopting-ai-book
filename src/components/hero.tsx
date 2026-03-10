@@ -4,12 +4,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ButtonColorful } from '@/components/ui/button-colorful'
+import { AuroraBackground } from '@/components/ui/aurora-background'
 
 const ease = [0.25, 0.46, 0.45, 0.94]
 
 export default function Hero() {
   return (
-    <div className="relative bg-white pt-24 pb-24 sm:pt-36 sm:pb-32 overflow-hidden text-center">
+    <AuroraBackground className="h-auto items-center justify-start pt-24 pb-24 sm:pt-36 sm:pb-32 bg-white text-center">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -68,6 +69,6 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
-    </div>
+    </AuroraBackground>
   )
 }
