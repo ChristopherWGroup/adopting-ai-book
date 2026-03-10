@@ -1,5 +1,7 @@
 import type { Config } from 'tailwindcss'
-import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette'
+
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const flattenColorPalette = require('tailwindcss/lib/util/flattenColorPalette').default
 
 function addVariablesForColors({ addBase, theme }: any) {
   const allColors = flattenColorPalette(theme('colors'))
