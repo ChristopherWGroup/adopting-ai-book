@@ -56,8 +56,7 @@ export default function EmailSignup() {
             Be the first to know
           </h2>
           <p className="text-white/70 text-lg mb-2 max-w-xl mx-auto">
-            Sign up to get notified when <em>Adopting AI</em> launches — plus a
-            free sample chapter and early-bird pricing.
+            Get notified when <em>Adopting AI</em> launches, and join a weekly newsletter with practical advice on how small business owners and solopreneurs can put AI to work in their businesses.
           </p>
           <p className="text-white/50 text-sm mb-10">
             No spam. Unsubscribe any time.
