@@ -10,10 +10,13 @@ export default function Navigation() {
 
   return (
     <header className="sticky top-0 z-50 glass-nav border-b border-black/5">
-      <nav className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-between">
+      <nav className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <span className="font-heading font-semibold text-base text-text-dark">
+        <Link href="/" className="flex items-center gap-2.5">
+          <div className="w-6 h-6 rounded-md bg-brand-primary flex items-center justify-center shrink-0">
+            <span className="text-white text-[10px] font-bold font-heading leading-none">AI</span>
+          </div>
+          <span className="font-heading font-semibold text-base text-text-dark tracking-tight">
             Adopting AI
           </span>
         </Link>

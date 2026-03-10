@@ -53,16 +53,28 @@ export default function Hero() {
           transition={{ duration: 0.9, delay: 0.3, ease }}
           className="mt-20 flex justify-center"
         >
-          <div className="w-56 h-72 sm:w-64 sm:h-80 bg-[#1d1d1f] rounded-2xl flex flex-col items-center justify-center p-8 shadow-2xl">
-            <div className="w-8 h-0.5 bg-white/30 rounded-full mb-6" />
-            <p className="font-heading font-bold text-white text-center text-lg leading-snug mb-3">
-              Adopting AI
-            </p>
-            <p className="text-white/50 text-xs text-center leading-relaxed">
-              A Guide for Business Owners Bringing AI Into Their Business
-            </p>
-            <div className="mt-auto w-full h-px bg-white/10" />
-            <p className="text-white/30 text-xs mt-4">Christopher W. Group</p>
+          <div className="relative">
+            {/* Ambient glow */}
+            <div className="absolute -inset-8 bg-[radial-gradient(ellipse_at_center,_#bfdbfe_0%,_transparent_70%)] opacity-40 blur-xl pointer-events-none" />
+            {/* Book shadow */}
+            <div className="absolute -bottom-5 left-6 right-6 h-10 bg-black/25 blur-xl rounded-full" />
+            {/* Book spine */}
+            <div className="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-[#0a0f1e] to-[#1a2540] rounded-l-md" />
+            {/* Book cover */}
+            <div className="relative w-56 h-72 sm:w-64 sm:h-80 bg-gradient-to-br from-[#1a2744] via-[#1e3060] to-[#0f1a35] rounded-r-lg rounded-l-none border border-white/[0.07] flex flex-col p-8 shadow-[0_30px_60px_-10px_rgba(0,0,0,0.7)]">
+              {/* Top accent */}
+              <div className="w-10 h-0.5 bg-brand-primary rounded-full mb-7" />
+              <p className="font-heading font-bold text-white text-left text-2xl leading-tight mb-2 tracking-tight">
+                Adopting AI
+              </p>
+              <p className="text-white/45 text-xs text-left leading-relaxed">
+                A Guide for Business Owners Bringing AI Into Their Business
+              </p>
+              <div className="mt-auto">
+                <div className="w-full h-px bg-white/10 mb-3" />
+                <p className="text-white/30 text-[11px]">Christopher W. Group</p>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>

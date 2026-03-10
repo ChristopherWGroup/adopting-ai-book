@@ -61,16 +61,19 @@ export default function AboutBook() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1, ease }}
-            className="bg-white/5 rounded-3xl p-8 border border-white/10"
+            className="bg-white/[0.04] rounded-3xl p-8 border border-white/[0.08] backdrop-blur-sm"
           >
-            <h3 className="font-heading font-semibold text-lg text-white mb-6 tracking-tight">
-              What makes this book different
-            </h3>
+            <div className="flex items-center gap-2 mb-6">
+              <div className="w-1 h-5 rounded-full bg-brand-primary" />
+              <h3 className="font-heading font-semibold text-lg text-white tracking-tight">
+                What makes this book different
+              </h3>
+            </div>
             <ul className="space-y-4">
               {highlights.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-white/50 shrink-0 mt-0.5" />
-                  <span className="text-white/60 text-sm font-light leading-relaxed">
+                  <CheckCircle2 className="w-5 h-5 text-brand-primary shrink-0 mt-0.5" />
+                  <span className="text-white/65 text-sm font-light leading-relaxed">
                     {item}
                   </span>
                 </li>

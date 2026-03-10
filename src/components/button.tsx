@@ -20,7 +20,7 @@ export function Button({
     primary:
       'bg-brand-primary text-white hover:bg-brand-primary-dark focus:ring-brand-primary',
     secondary:
-      'bg-transparent text-brand-primary hover:underline focus:ring-brand-primary',
+      'bg-transparent text-brand-primary border border-brand-primary/30 hover:border-brand-primary/60 hover:bg-brand-primary/5 focus:ring-brand-primary',
     accent:
       'bg-surface-near-black text-white hover:bg-black focus:ring-surface-near-black',
   }

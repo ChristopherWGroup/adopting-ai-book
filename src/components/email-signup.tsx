@@ -41,17 +41,19 @@ export default function EmailSignup() {
   const ease = [0.25, 0.46, 0.45, 0.94]
 
   return (
-    <Section className="bg-black" id="signup">
+    <Section className="relative bg-black overflow-hidden" id="signup">
+      {/* Subtle radial gradient decor */}
+      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[radial-gradient(ellipse_at_top,_#0d2d5e_0%,_transparent_70%)] opacity-60" />
       <Container size="md">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease }}
-          className="text-center"
+          className="text-center relative z-10"
         >
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/5 mb-6">
-            <Mail className="w-7 h-7 text-white/60" />
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-brand-primary/15 border border-brand-primary/20 mb-6">
+            <Mail className="w-7 h-7 text-brand-primary" />
           </div>
 
           <h2 className="font-heading font-bold text-[40px] sm:text-[52px] text-white tracking-tighter leading-tight mb-4">

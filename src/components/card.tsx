@@ -16,7 +16,7 @@ export function Card({ children, padding = 'md', className }: CardProps) {
   return (
     <div
       className={cn(
-        'bg-surface-light rounded-3xl',
+        'bg-white rounded-3xl border border-black/[0.06] shadow-sm hover:shadow-md hover:shadow-black/5 hover:border-black/[0.1] transition-all duration-300',
         paddings[padding],
         className
       )}

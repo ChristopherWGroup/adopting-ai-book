@@ -81,15 +81,19 @@ export default function WhatYoullLearn() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.06, ease }}
-              className="flex flex-col p-8 rounded-3xl bg-surface-light"
+              className="relative flex flex-col p-8 rounded-3xl bg-surface-light overflow-hidden hover:bg-[#efeff1] transition-colors duration-300"
             >
-              <div className="w-10 h-10 flex items-center justify-center rounded-2xl bg-[#1d1d1f] mb-5 shrink-0">
+              {/* Background number */}
+              <span className="absolute top-4 right-5 font-heading font-bold text-[64px] leading-none text-black/[0.04] select-none pointer-events-none">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <div className="w-10 h-10 flex items-center justify-center rounded-2xl bg-[#1d1d1f] mb-5 shrink-0 relative z-10">
                 <lesson.icon className="w-5 h-5 text-white" />
               </div>
-              <h3 className="font-heading font-semibold text-text-dark mb-2 tracking-tight">
+              <h3 className="font-heading font-semibold text-text-dark mb-2 tracking-tight relative z-10">
                 {lesson.title}
               </h3>
-              <p className="text-text-muted text-sm font-light leading-relaxed">
+              <p className="text-text-muted text-sm font-light leading-relaxed relative z-10">
                 {lesson.description}
               </p>
             </motion.div>
