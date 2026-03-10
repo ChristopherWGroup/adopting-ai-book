@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Button } from './button'
 import { ButtonColorful } from '@/components/ui/button-colorful'
 
 const ease = [0.25, 0.46, 0.45, 0.94]
@@ -39,9 +38,10 @@ export default function Hero() {
               <ButtonColorful label="Get Notified at Launch" className="h-14 px-8 text-lg" />
             </Link>
             <Link href="#about">
-              <Button size="lg" variant="secondary">
-                Learn More
-              </Button>
+              <button className="relative inline-flex items-center justify-center gap-2 h-14 px-8 text-lg bg-white text-zinc-900 font-sans font-medium rounded-full overflow-hidden border border-black/10 transition-all duration-200 group">
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-10 blur transition-opacity duration-500" />
+                <span className="relative">Learn More</span>
+              </button>
             </Link>
           </div>
         </motion.div>
