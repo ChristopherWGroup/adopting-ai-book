@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { Button } from './button'
@@ -14,9 +15,13 @@ export default function Navigation() {
       <nav className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5">
-          <div className="w-6 h-6 rounded-md bg-brand-primary flex items-center justify-center shrink-0">
-            <span className="text-white text-[10px] font-bold font-heading leading-none">AI</span>
-          </div>
+          <Image
+            src="/Logo - transparent background - favicon.png"
+            alt="Adopting AI logo"
+            width={24}
+            height={24}
+            className="shrink-0"
+          />
           <span className="font-heading font-semibold text-base text-text-dark tracking-tight">
             Adopting AI
           </span>

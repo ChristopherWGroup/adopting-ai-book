@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { Section, Container } from '@/components/container'
-import { Button } from '@/components/button'
 import { ButtonColorful } from '@/components/ui/button-colorful'
 import BlogPreview from '@/components/blog-preview'
 
@@ -22,10 +21,6 @@ export default function HomePage() {
         <div className="pointer-events-none absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,_#f0f4ff_0%,_transparent_70%)] opacity-40" />
         <Container>
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 text-brand-primary text-sm font-medium bg-brand-primary/8 px-3 py-1.5 rounded-full mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-primary inline-block" />
-              Practical AI guidance for business owners
-            </span>
             <h1 className="font-heading font-bold text-[52px] sm:text-[68px] lg:text-[84px] text-text-dark leading-none tracking-tighter mb-6">
               AI for the businesses actually running things.
             </h1>
@@ -38,9 +33,10 @@ export default function HomePage() {
                 <ButtonColorful label="Browse Resources" className="h-14 px-8 text-lg" />
               </Link>
               <Link href="/book">
-                <Button size="lg" variant="secondary">
-                  About the Book
-                </Button>
+                <button className="relative inline-flex items-center justify-center gap-2 h-14 px-8 text-lg bg-white text-zinc-900 font-sans font-medium rounded-full overflow-hidden border border-black/10 transition-all duration-200 group">
+                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-10 blur transition-opacity duration-500" />
+                  <span className="relative">About the Book</span>
+                </button>
               </Link>
             </div>
           </div>
