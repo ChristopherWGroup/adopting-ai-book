@@ -29,14 +29,19 @@ export async function POST(request: NextRequest) {
     )
 
     if (!res.ok) {
-      const error = await res.json()
-      throw new Error(error.message || 'Failed to subscribe')
+      const text = await res.text()
+      console.error(`[subscribe] Beehiiv error ${res.status}:`, text)
+      return NextResponse.json(
+        { success: false, message: `Beehiiv error ${res.status}: ${text}` },
+        { status: 500 }
+      )
     }
 
     return NextResponse.json({ success: true })
-  } catch {
+  } catch (err) {
+    console.error('[subscribe] Unexpected error:', err)
     return NextResponse.json(
-      { success: false, message: 'An unexpected error occurred. Please try again.' },
+      { success: false, message: err instanceof Error ? err.message : 'An unexpected error occurred.' },
       { status: 500 }
     )
   }
