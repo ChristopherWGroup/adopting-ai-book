@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://adoptingaibook.com/sitemap.xml',
+    sitemap: 'https://adopting-ai.com/sitemap.xml',
   }
 }

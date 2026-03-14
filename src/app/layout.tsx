@@ -14,7 +14,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://adoptingaibook.com'),
+  metadataBase: new URL('https://adopting-ai.com'),
   title: {
     default: 'Adopting AI | A Guide for Business Owners',
     template: '%s | Adopting AI',

@@ -5,7 +5,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = getAllPosts()
 
   const blogUrls = posts.map((post) => ({
-    url: `https://adoptingaibook.com/blog/${post.slug}`,
+    url: `https://adopting-ai.com/blog/${post.slug}`,
     lastModified: new Date(post.date),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
@@ -13,19 +13,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     {
-      url: 'https://adoptingaibook.com',
+      url: 'https://adopting-ai.com',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
-      url: 'https://adoptingaibook.com/book',
+      url: 'https://adopting-ai.com/book',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: 'https://adoptingaibook.com/blog',
+      url: 'https://adopting-ai.com/blog',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
